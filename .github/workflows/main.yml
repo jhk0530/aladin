@@ -6,7 +6,7 @@ name: CI
 # events but only for the main branch
 on:
   schedule:
-    - cron: '36 12 * * *' # 13:00 UTC -> 22:00 KST, Everyday PM 10
+    - cron: '22 13 * * *' # 13:00 UTC -> 22:00 KST, Everyday PM 10
   
 jobs:  
   build:    
