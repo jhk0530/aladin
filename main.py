@@ -18,7 +18,7 @@ if __name__ == "__main__":
   soup = BeautifulSoup(res, features = 'html.parser')
   titles = soup.find_all("a", {"class":"bo_l"})
   titles2 = [i.text.split('<b>') for i in titles]
-
+  issue_title = f"알라딘 중고서점 잠실점 IT 신간 도서 알림({today_data})"
   repo = get_github_repo(access_token, repository_name)
   upload_github_issue(repo, issue_title, titles2)
   print("Upload Github Issue Success!")
